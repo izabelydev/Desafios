@@ -6,10 +6,10 @@ Bem-vindo ao repositório Desafios de código! Aqui você encontrará uma coleç
 
 | Desafio | Descrição |
 | -------------- | --------- |
-| [HBO Max](https://github.com/izabelydev/Desafios/hbo-max) | Página para selecionar o plano HBO Max. |
-| [Netflix](https://github.com/izabelydev/Desafios/netflix) | Início Netflix |
-| [Login Register](https://github.com/izabelydev/Desafios/login-register) | Box para login e/ou cadastro do usuário |
-| [Landing Page](https://github.com/izabelydev/Desafios/landing-page) | Landing page simples e responsiva |
-| [Resumo do pedido](https://github.com/izabelydev/Desafios/order-summary-component-main) | Frontend Mentor: box para resumo do pedido |
-| [Relógio digital](https://github.com/izabelydev/Desafios/relogio-digital-dinamico) | Relógio digital dinâmico em tempo real |
-| [Finn Jump](https://github.com/izabelydev/Desafios/jogo-hora-de-aventura) | Jogo Hora de Aventura Finn jump |
+| [HBO Max](https://github.com/izabelydev/Desafios/tree/main/hbo-max) | Página para selecionar o plano HBO Max. |
+| [Netflix](https://github.com/izabelydev/Desafios/tree/main/netflix) | Início Netflix |
+| [Login Register](https://github.com/izabelydev/Desafios/tree/main/login-register) | Box para login e/ou cadastro do usuário |
+| [Landing Page](https://github.com/izabelydev/Desafios/tree/main/landing-page) | Landing page simples e responsiva |
+| [Resumo do pedido](https://github.com/izabelydev/Desafios/tree/main/order-summary-component-main) | Frontend Mentor: box para resumo do pedido |
+| [Relógio digital](https://github.com/izabelydev/Desafios/tree/main/relogio-digital-dinamico) | Relógio digital dinâmico em tempo real |
+| [Finn Jump](https://github.com/izabelydev/Desafios/tree/main/jogo-hora-de-aventura) | Jogo Hora de Aventura Finn jump |
