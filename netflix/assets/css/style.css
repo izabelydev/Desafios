@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-primary: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://assets.nflxext.com/ffe/siteui/vlv3/76c10fc9-7ccd-4fbf-bc59-f16a468921ca/529648c5-e595-4746-af3f-fab3106e3146/BR-pt-20230529-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    --gradient-border: linear-gradient(0deg, rgba(0, 8, 29, 1), rgba(0, 8, 29, 1)) padding-box, linear-gradient(271.65deg, #233371 5.26%, #00197a 50.02%, #e50914 97.68%) border-box;
+    --black-alpha: rgba(0,0,0,0.6);
+    --white-color: #fff;
+    --light-gray: #666666;
+    --white-alpha-font: rgba(255, 255, 255, 0.6);
+    --red-color: rgb(229,9,20);
+    --red-color-hover: rgb(193, 17, 25);
+    --light-blue: rgb(68, 142, 244);
+    --font-type:  Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+body {
+    background: var(--background-primary);
+    background-position: center auto;
+    background-size: auto;
+    background-attachment: scroll;
+    background-origin: padding-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10rem;
+    width: 100%;
+    height: 5rem;
+}
+
+select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--white-color);
+    font-size: 1rem;
+    padding: 0 .2rem 0 .4rem;
+    margin-top: -.2rem;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 1.4rem auto;
+    font-family: var(--font-type);
+}
+
+input {
+    min-width: 10rem;
+    width: 25.5rem;
+    padding: 1rem;
+    border: .1rem solid var(--light-gray);
+    border-radius: .3rem;
+    background: var(--black-alpha);
+    font-size: 1.2rem;
+    color: var(--white-color);
+}
+
+.p-form-email {
+    font-size: 1.3rem
+}
+
+
+.logo-img {
+    width: 9.5rem;
+}
+
+.navigation {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.material-symbols-outlined {
+    color: var(--white-color);
+}
+
+.languages-div {
+    background: var(--black-alpha);
+    padding: .2rem 1rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .1rem solid var(--light-gray);
+    border-radius: .3rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.languages-div:hover {
+    border: .1rem solid var(--white-color);
+}
+
+.bt-login {
+    padding: .4rem 1.1rem;
+    background: var(--red-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--white-color);
+    border: none;
+    border-radius: .3rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.bt-login:hover,
+.div-bt-vamosla:hover {
+    background: var(--red-color-hover);
+}
+
+.bt-vamos-la {
+    background: transparent;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--white-color);
+    border: none;
+    border-radius: .3rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.div-bt-vamosla {
+    margin: 0 auto;
+    padding: .9rem 1.5rem;
+    background: var(--red-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--white-color);
+    border: none;
+    border-radius: .3rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-div,
+.complete-languages-div {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-form-div {
+    margin-top: 12rem;
+    margin-bottom: 10.6rem;
+}
+
+.form-div {
+    margin: 0 auto;
+    color: var(--white-color);
+    font-family: var(--font-type);
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 74rem;
+}
+
+.input-email  {
+    width: 37rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.bucket-popcorn-img {
+    width: 5rem;
+    margin: 2rem 2rem 2rem 4rem;
+}
+
+.align-default-plain {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.default-plan {
+    background-image: url(https://www.shutterstock.com/image-illustration/raster-abstract-dark-blue-pink-260nw-346904120.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: .3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    width: 80%;
+    display: flex;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    z-index: 1;
+    position: absolute;
+}
+
+.all-sections {
+    position: relative;
+    z-index: 0;
+    margin-top: 4rem;
+}
+
+.first-section {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+.p-default-plain {
+    margin-top: 0;
+    margin-bottom: .8rem;
+}
+
+.p-default-plain-content {
+    font-size: 1rem;
+    margin: .8rem 0 .8rem 0;
+}
+
+.div-bt-saibamais {
+    display: flex;
+    align-items: center;
+}
+
+.bt-saiba-mais {
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: .1rem solid var(--light-blue);
+    color: var(--light-blue);
+    font-size: 1rem;
+    margin-right: .3rem;
+}
+
+.color-icon {
+    color: var(--light-blue);
+}
+
+.main-content-right,
+.main-content-left {
+    width: 100%;
+    min-height: 85vh;
+    background: #000;
+    border-bottom: .5rem solid var(--light-gray);
+    color: var(--white-color);
+    font-family: var(--font-type);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content,
+.img-content {
+    width: 30rem;
+    margin: .5rem;
+}
+
+@media (max-width: 80rem) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        width: 6rem;
+    }
+
+    .form-div {
+        width: 100%;
+    }
+
+    .margin-form-div {
+        margin-top: 8rem;
+        margin-bottom: 6rem;
+    }
+
+    .p-form-email {
+        font-size: 0.9rem
+    }
+
+    .default-plan {
+        margin: 7rem auto 0 2.5rem;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        width: 45rem;
+    }
+
+    .all-sections {
+        position: relative;
+        z-index: 0;
+        margin-top: 3rem;
+    }
+
+    .main-content-right,
+    .main-content-left {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content,
+    .img-content {
+        width: 30rem;
+        margin: 0;
+
+    }
+
+    .content-img-left img {
+        margin-top: 16rem;
+        margin-bottom: 0;
+    }
+
+    .content-img-left > div.content {
+        margin-top: -58rem;
+    }
+
+    .content-img-right img {
+        padding-bottom: 5rem;
+    }
+
+    .content-img-right > div.content {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    header {
+        padding: .3rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+
+
+    p {
+        font-size: .8rem;
+    }
+
+    input {
+        width: 10.5rem;
+        padding: .5rem;
+        font-size: .8rem;
+    }
+
+    select {
+        font-size: .8rem;
+    }
+
+    span.material-symbols-outlined {
+        font-size: 1rem;
+    }
+
+    #languages-select {
+        margin-bottom: .3rem;
+    }
+
+    .languages-div  {
+        margin-right: .3rem;
+        padding: 0.1rem .3rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bt-login {
+        font-size: .8rem;
+    }
+
+    .logo-img {
+        width: 4rem;
+    }
+
+    .form-div {
+        width: 100%;
+    }
+
+    .input-email {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .bt-vamos-la {
+        font-size: .8rem;
+    }
+    
+    .div-bt-vamosla {
+        margin: 0 .4rem;
+        padding: .5rem 1rem;
+        font-size: 1.4rem;
+    }
+
+    .margin-form-div {
+        margin-top: 8rem;
+        margin-bottom: 6rem;
+    }
+
+    .p-form-email {
+        font-size: 0.5rem
+    }
+
+    .default-plan {
+        margin: 0 auto;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        width: 80%;
+    }
+
+    .bucket-popcorn-img {
+        width: 3rem;
+        margin: 1rem;
+    }
+
+    .p-default-plain {
+        margin-top: 0;
+        margin-bottom: .1rem;
+        font-size: .7rem;
+    }
+    
+    .p-default-plain-content {
+        font-size: .6rem;
+        margin: .4rem 0;
+    }
+
+    .bt-saiba-mais {
+        font-size: .95rem;
+    }
+
+    .all-sections {
+        position: relative;
+        z-index: 0;
+        margin-top: 0rem;
+    }
+
+    .main-content-right,
+    .main-content-left {
+        display: grid;
+        max-height: 50vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content,
+    .img-content {
+        width: 20rem;
+        margin: 0;
+
+    }
+
+    .content-img-left img {
+        margin-top: 16rem;
+        margin-bottom: 0;
+    }
+
+    .content-img-left > div.content {
+        margin-top: -58rem;
+    }
+
+    .content-img-right img {
+        padding-bottom: 5rem;
+    }
+
+    .content-img-right > div.content {
+        margin-top: 3rem;
+    }
+}

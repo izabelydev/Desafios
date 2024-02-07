@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.game-board {
+    background-image: url(/img/background.png) ;
+    background-position: bottom;
+    background-size: cover;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative; 
+    overflow: hidden;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.finn {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+
+.jump {
+    animation: jump 600ms ease-out;
+}
+
+
+@keyframes pipe-animation {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}

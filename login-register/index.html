@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<!-- Esse projeto foi feito seguindo o passo a passo do video: https://www.youtube.com/watch?v=p1GmFCGuVjw -->
+
+<body>
+    <header>
+        <img src="https://1000logos.net/wp-content/uploads/2020/09/Adventure-Time-Logo.png" alt="Adventure-Time-Logo"
+            class="logo">
+        <nav class="navegacao">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+            <button class="bt-login">Entrar</button>
+        </nav>
+    </header>
+
+    <div class="caixa">
+        <span class="icone-fechar">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="formulario login">
+            <h2>Entrar</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icone">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" placeholder="E-mail" required>
+                    <!-- <label>E-mail</label> -->
+                </div>
+                <div class="input-box">
+                    <span class="icone">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" placeholder="Senha" required>
+                    <!-- <label>Senha</label> -->
+                </div>
+                <div class="lembrar-esquecer">
+                    <label><input type="checkbox"> Lembrar senha</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="bt-entrar">Entrar</button>
+                <div class="login-registrar">
+                    <p>Não possui uma conta? <a href="#" class="link-registrar">Criar conta</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="formulario registrar">
+            <h2>Criar conta</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icone">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" placeholder="Nome de usuário" required>
+                    <!-- <label>E-mail</label> -->
+                </div>
+                <div class="input-box">
+                    <span class="icone">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" placeholder="E-mail" required>
+                    <!-- <label>E-mail</label> -->
+                </div>
+                <div class="input-box">
+                    <span class="icone">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" placeholder="Senha" required>
+                    <!-- <label>Senha</label> -->
+                </div>
+                <div class="lembrar-esquecer">
+                    <label><input type="checkbox"> Eu concordo com os Termos & Condições</label>
+                </div>
+                <button type="submit" class="bt-entrar">Criar conta</button>
+                <div class="login-registrar">
+                    <p>Você possui uma conta? <a href="#" class="link-entrar">Entrar</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

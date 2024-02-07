@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy",sans-serif;
+}
+
+body {
+    background-image: url(https://www.hbomax.com/static/wef/img/bg-gradient.jpg);
+    background-size: auto;
+    background-position: top center;
+}
+
+.heading {
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+}
+
+img {
+    width: 150px;
+    padding: 15px 15px 15px 50px;
+    margin: 0 auto;
+}
+
+div button {
+    background: transparent;
+    color: lightblue;
+    border: 0;
+    margin: 15px;
+}
+
+.passo p {
+    width: 150px;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+.h1 p {
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    padding: 10px 0 0;
+    color: #f0f0f0;
+}
+
+p.txt {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    color: #f0f0f0;
+}
+
+section.planos {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+div.plano-mes {
+    box-sizing: border-box;
+    display: block;
+    padding-top: 50px;
+    padding-left: 25px;
+    background: rgba(255, 255, 255, 0.09);
+    width: 300px;
+    height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+div.plano-mes:hover {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.13);
+    transition: all 500ms ease-in-out;
+}
+
+div.plano-mes p.mes {
+    text-align: left;
+    font-size: 35px;
+    color: #f0f0f0;
+}
+
+div.plano-mes p.preco {
+    text-align: left;
+    font-size: 20px;
+    color: #f0f0f0;
+}
+
+div.plano-mes h5 {
+    color: rgb(118, 184, 206);
+}
+
+ul.lista {
+    list-style: none;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: hsla(0,0%,100%,.75);
+    font-size: 15px;
+}
+
+ul.lista li {
+    padding-bottom: 8px;
+}
+
+ul.lista li::before {
+    content: '+ ';
+    padding-right: 10px;
+}
+
+.tds-dispositivos {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+img.icones {
+    width: 90px;
+    padding: 0;
+    margin: 0;
+}
+
+button.bt-plano {
+    background: #8523d4;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 30px;
+    margin: 0 auto;
+    color: #f0f0f0;
+}
+
+button.bt-plano:hover {
+    background: #aa59ec;
+    transition: all 500ms ease-in-out;
+}

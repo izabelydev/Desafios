@@ -1,0 +1,233 @@
+.inicio-content,
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.inicio-text-content,
+.inicio-img,
+.contact-text-content,
+.contact-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.inicio-img img,
+.contact-img  img {
+    max-width: 100%;
+    height: auto;
+}
+
+.intro-content, 
+.pricing-content {
+    max-width: 64rem;
+    height: 100vh;
+    display: block;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.top3-grid-content,
+.gallery-grid-content,
+.work-grid-content {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -3rem;
+    left: -2rem;
+    transform: rotate(5deg);
+    /* rotação 5 graus */
+} 
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.gallery-img img {
+    transition: all .3s ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: rotate(5deg) scale(1.2);
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap);
+}
+
+.form-grid h4 {
+    margin-bottom: 3rem;
+}
+
+.form-input-group {
+    flex: 1 1 32rem;
+}
+
+.form-input-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-input-group input,
+.form-input-group textarea {
+    border: none;
+    border-radius: 1rem;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.form-input-group input:focus,
+.form-input-group textarea:focus {
+    box-shadow: 0 0 1rem var(--secondary-color);
+} 
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-input-group button {
+    padding: 1.5rem 2rem;
+    border: 0.2rem solid var(--white-color);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.form-input-group button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.form-input-group ::placeholder {
+    color: var(--font-light-gray-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    border: 0.04rem solid var(--white-color);
+}
+
+@media (max-width: 80rem) {
+    .inicio-content, .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 1rem;
+    } 
+
+    .gallery-img img {
+        width: 100%;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 4rem;
+        line-height: 2.5rem;
+        text-align: center;
+        width: 4rem;
+        height: 3rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+}

@@ -1,0 +1,130 @@
+:root {
+    --Very-pale-blue: hsl(227, 83%, 95%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    background-image: url(/Projetos/desafio-resumo-do-pedido/order-summary-component-main/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Very-pale-blue);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+main {
+    background: #fff;
+    max-width: 416px;
+    border-radius: 1rem;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    height: 100%;
+    width: 100%;
+}
+
+main section h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--Dark-blue);
+}
+
+main section span {
+    color: var(--Desaturated-blue);
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+main div.informations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--Very-pale-blue);
+    border-radius: 0.8rem;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+}
+
+main .informations .music-price {
+    display: flex;
+    align-items: center;
+}
+
+main .informations .price{
+    display: flex;
+    flex-direction: column;
+}
+
+main .informations img {
+    width: 48px;
+    margin-right: 1rem;
+}
+
+main .informations a {
+    color: var(--Bright-blue);
+    font-weight: 600;
+    font-size: 90%;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+main .informations a:hover{
+    color: var(--Dark-blue);
+    text-decoration: underline;
+}
+
+main button {
+    cursor: pointer;
+    background: var(--Bright-blue);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.2);
+    transition: background 0.5s;
+
+}
+
+main button:hover{
+    background: #766cf1;
+}
+
+#cancel-order {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    transition: color 0.5s;
+}
+
+#cancel-order:hover{
+    color: var(--Dark-blue);
+}
