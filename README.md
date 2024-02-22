@@ -7,7 +7,8 @@ Bem-vindo ao repositório Desafios de código! Aqui você encontrará uma coleç
 
 | Desafio | Descrição |
 | -------------- | --------- |
-| [HBO Max](https://github.com/izabelydev/Desafios/tree/main/hbo-max) | Página para selecionar o plano HBO Max. |
+| [Currículo](https://github.com/izabelydev/Desafios/tree/main/curriculo) | Projeto básico apenas com HTML e CSS puro: desafio da faculdade + treinando semântica |
+| [HBO Max](https://github.com/izabelydev/Desafios/tree/main/hbo-max) | Página para selecionar o plano HBO Max |
 | [Netflix](https://github.com/izabelydev/Desafios/tree/main/netflix) | Início Netflix |
 | [Login Register](https://github.com/izabelydev/Desafios/tree/main/login-register) | Box para login e/ou cadastro do usuário |
 | [Landing Page](https://github.com/izabelydev/Desafios/tree/main/landing-page) | Landing page simples e responsiva |
