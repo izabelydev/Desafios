@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(87, 86, 86);
+}
+
+body {
+    background: url(https://st2.depositphotos.com/6442704/11359/i/450/depositphotos_113595666-stock-photo-blue-white-blur-abstract-backgroun.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    margin: 2rem 15rem;
+    padding: 2rem 5rem;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    border: 2px solid #69e4f1;
+    background-color: rgb(555, 555, 555);
+    border-radius: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.material-symbols-outlined {
+    margin-right: 5px;
+}
+
+.call {
+    margin-left: 30px;
+}
+
+.span-name {
+    align-items: center;
+    justify-content: center;
+    display: block; 
+    padding: 20px 15px;
+    background-color: #dcf7fa;
+    border: 1px solid #69e4f1;
+    border-radius: 10px;
+}
+
+.span-name h1,
+.span-name h2 {
+    text-align: center;
+
+}
+
+.informations {
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.informations p {
+    font-size: 15px;
+    padding: 0 15px 15px;
+}
+
+.objective h1, 
+.training h1,
+.courses h1,
+.experience h1 {
+    font-size: 24px;
+    padding: 5px;
+    margin: 8px 0;
+    background-color: #dcf7fa;
+    border: 1px solid #69e4f1;
+    border-radius: 10px;
+}
+
+.objective h2, 
+.training h2,
+.courses h2,
+.experience h2 {
+    font-size: 18px;
+}
+
+.courses-content {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.courses-content span.course {
+    border: 1px solid rgb(146, 145, 145);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.courses-content p {
+    font-size: 13px;
+    padding: 0 15px 15px;
+}
