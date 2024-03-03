@@ -20,9 +20,9 @@ html {
 div.menu_wrapper {
     border: 1px solid #050505;
     background: #0e0d0d;
-    width: 24%;
+    width: 22%;
     height: 100vh;
-    padding: 20px 0 10px 20px;
+    padding: 20px 0 20px 10px;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -42,7 +42,7 @@ menu.menu-content li {
 menu.menu-content li > a {
     text-decoration: none;
     font-size: 14px;
-    padding: 5px 15px;
+    padding: 5px 5px;
     border-radius: 10px;
     transition: all .5s;
 }
@@ -94,7 +94,7 @@ span.material-symbols-outlined:hover {
 /* --------------- Content ----------- */
 
 div.content_wrapper {
-    width: 76%;
+    width: 78%;
     height: 100vh;
     margin-left: 24%;
     overflow-y: scroll;
