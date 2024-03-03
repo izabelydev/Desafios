@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+body {
+    color: #ffffff;
+    background: #111111;
+    display: flex;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --------------- Menu ----------- */
+div.menu_wrapper {
+    border: 1px solid #050505;
+    background: #0e0d0d;
+    width: 24%;
+    height: 100vh;
+    padding: 20px 0 10px 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+div.menu_wrapper h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+menu.menu-content li {
+    margin-bottom: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+menu.menu-content li > a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+menu.menu-content li > a:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+
+/* --------------- Header ----------- */
+
+header.content__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+    margin: 20px auto;
+}
+
+div.header-logo h1 {
+    font-size: 22px;
+}
+
+div.header-icons a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+span.material-symbols-outlined {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: all .5s;
+}
+
+span.material-symbols-outlined:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+
+/* --------------- Content ----------- */
+
+div.content_wrapper {
+    width: 76%;
+    height: 100vh;
+    margin-left: 24%;
+    overflow-y: scroll;
+}
+
+div.content_description {
+    width: 850px;
+    margin: 30px auto 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+
+    border-radius: 20px;
+    border: 1px solid #050505;
+    background: #0e0d0d;
+}
+
+span.description h1 {
+    margin: 20px 0;
+}
+
+span.description h1 > a {
+    text-decoration: none;
+    color: #ffffff;
+}
