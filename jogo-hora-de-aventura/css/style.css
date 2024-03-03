@@ -5,7 +5,7 @@
 } 
 
 .game-board {
-    background-image: url(/img/background.png) ;
+    background-image: url(/Desafios/jogo-hora-de-aventura/img/background.png) ;
     background-position: bottom;
     background-size: cover;
     width: 80%;

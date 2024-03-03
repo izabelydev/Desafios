@@ -23,7 +23,7 @@ const loop = setInterval(() => {
         finn.style.animation = 'none';
         finn.style.bottom = `${finnPosition}px`;
 
-        finn.src = '/img/finn-chateado.png';
+        finn.src = './img/finn-chateado.png';
         finn.style.width = '100px';
 
         clearInterval(loop);
