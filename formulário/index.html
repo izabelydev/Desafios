@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <div class="img-background">
+        <img src="https://png.pngtree.com/png-vector/20231108/ourmid/pngtree-blue-wave-border-with-papercut-style-effect-vector-png-image_10511616.png" alt="">
+    </div>
+
+    <div class="logo-school_wrapper">
+        <img src="https://png.pngtree.com/png-clipart/20230816/original/pngtree-design-templates-for-logos-representing-universities-academies-schools-and-courses-vector-picture-image_10873764.png" alt="">
+    </div>
+
+    <div class="form__container">
+        <h1>Solicitação de Curso</h1>
+
+        <form action="#">
+            <h2>Entre com seus dados</h2>
+
+            <section class="personal-data">
+                <span class="name-area">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="names" placeholder="Seu nome" required>
+                </span>
+
+                <span class="adress-area">
+                    <label for="adress">Endereço:</label>
+                    <input type="text" id="adress" name="adresses" placeholder="Seu endereço" required>
+                </span>
+
+                <span class="cep-area">
+                    <label for="cep">Cep:</label>
+                    <input type="number" id="cep" name="cep" placeholder="00000" required>
+                </span>
+
+                <span class="city-area">
+                    <label for="city">Cidade:</label>
+                    <input type="text" id="city" name="cities" required>
+                </span>
+
+                <span class="state-area">
+                    <label for="state">Estado:</label>
+                    <select name="states" id="state">
+                        <option value="null">Selecionar</option>
+                        <option value="AC">AC</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="PA">PA</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="TO">TO</option>
+                        <option value="AL">AL</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="MA">MA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RN">RN</option>
+                        <option value="SE">SE</option>
+                        <option value="ES">ES</option>
+                        <option value="MG">MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                        <option value="PR">PR</option>
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                        <option value="DF">DF</option>
+                        <option value="GO">GO</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                    </select>
+                </span>
+
+
+            </section>
+
+            <h2>Escolha o nível</h2>
+
+            <section class="level-data">
+                <span>
+                    <input type="radio" id="basic" name="level" value="basic">
+                    <label for="basic">Básico</label>
+                    <br>
+                    <input type="radio" id="intermediate" name="level" value="intermediate">
+                    <label for="intermediate">Intermediário</label>
+                    <br>
+                    <input type="radio" id="advanced" name="level" value="advanced">
+                    <label for="advanced">Avançado</label>
+                </span>
+            </section>
+
+            <h2>Escolha os materiais</h2>
+
+            <section class="level-data">
+                <span>
+                    <input type="checkbox" id="fita" name="material" value="fita">
+                    <label for="fita">Fita</label>
+                    <br>
+                    <input type="checkbox" id="cd" name="material" value="cd">
+                    <label for="cd">CD</label>
+                    <br>
+                    <input type="checkbox" id="dvd" name="material" value="dvd">
+                    <label for="dvd">DVD</label>
+                    <br>
+                    <input type="checkbox" id="livro-texto" name="material" value="livro-texto">
+                    <label for="livro-texto">Livro texto</label>
+                    <br>
+                    <input type="checkbox" id="livro-gramatica" name="material" value="livro-gramatica">
+                    <label for="livro-gramatica">Livro de gramática</label>
+                </span>
+            </section>
+            
+            <h2>Comentários</h2>
+
+            <section class="coments-area">
+                <span>
+                    <textarea rows="8" cols="72"></textarea>
+                </span>
+            </section>
+            
+        
+            <section class="buttons-area">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+    </div>
+</body>
+
+</html>

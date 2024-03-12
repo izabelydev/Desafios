@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(73, 68, 68);
+}
+
+body {
+    width: 100vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(18, 112, 199, 0.116);
+}
+
+form {
+    width: 500px;
+    height: 420px;
+    overflow-y: scroll;
+}
+
+form h2 {
+    margin: 15px 0;
+}
+
+.img-background img {
+    width: 750px;
+    margin-top: 70px;
+    position: fixed;
+}
+
+.logo-school_wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 600px;
+    height: 500px;
+    margin-left:8%;
+}
+
+.logo-school_wrapper img {
+    width: 600px;
+}
+
+div.form__container {
+    margin-left: 700px;
+    margin-right: 65px;
+    margin-top: 25px;
+    padding: 20px 30px 20px 60px;
+    border: 1px solid rgb(157, 180, 211);
+    border-radius: 20px;
+    width: 700px;
+    height: 550px;
+
+    background-color: rgb(255, 255, 255);
+}
+
+div.form__container h1 {
+    text-align: center;
+}
+
+section.personal-data {
+    display: flex;
+    flex-direction: column;
+}
+
+span.name-area,
+span.adress-area,
+span.cep-area,
+span.city-area,
+span.state-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+span.name-area label {
+    margin-right: 30px;
+}
+
+.name-area input {
+    width: 380px;
+}
+
+span.adress-area label {
+    margin-right: 8px;
+}
+
+.adress-area input {
+    width: 380px;
+}
+
+span.cep-area label {
+    margin-right: 45px;
+}
+
+.cep-area input {
+    width: 100px;
+}
+
+span.city-area label {
+    margin-right: 23px;
+}
+
+.city-area input {
+    width: 200px;
+}
+
+span.state-area label {
+    margin-right: 25px;
+}
+
+.state-area input {
+    width: 100px;
+}
+
+.buttons-area {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-area button {
+    border: 1px solid rgb(157, 180, 211);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 2px 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.buttons-area button:hover {
+    background-color: rgb(157, 180, 211);
+    color: aliceblue;
+}
