@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+section {
+    width: 500px;
+    height: 600px;
+    top: 8%;
+}
+
+.first-bg {
+    background-image: url(../images/bg-desktop-light.jpg);
+    width: 1440px;
+    height: 291.656px;
+}
+
+.second-bg {
+    top: 291.656px;
+    width: 1440px;
+    height: 55vh;
+}
+
