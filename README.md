@@ -16,3 +16,4 @@ Bem-vindo ao repositório Desafios de código! Aqui você encontrará uma coleç
 | [Resumo do pedido](https://github.com/izabelydev/Desafios/tree/main/order-summary-component-main) | Frontend Mentor: box para resumo do pedido |
 | [Relógio digital](https://github.com/izabelydev/Desafios/tree/main/relogio-digital-dinamico) | Relógio digital dinâmico em tempo real |
 | [Finn Jump](https://github.com/izabelydev/Desafios/tree/main/jogo-hora-de-aventura) | Jogo Hora de Aventura Finn jump |
+
