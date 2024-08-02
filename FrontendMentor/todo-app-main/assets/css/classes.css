@@ -11,8 +11,12 @@
     transition: opacity .5s;
 }
 
-.btn-check {
-    cursor: pointer;
+.btn-check-disabled {
+    cursor: default;
+}
+
+.btn-check,
+.btn-check-disabled {
     width: 18px;
     height: 18px;
     margin-right: 5px;
@@ -21,21 +25,41 @@
     position: relative;
 }
 
-.btn-check img {
+.btn-check img,
+.btn-check-disabled img {
     width: 100%;
     opacity: 0;
     border-radius: 50%;
     background: var(--Check-Background);
 }
 
+.checked-icon-img {
+    opacity: 1;
+}
+
 .task-txt {
+    width: 85%;
     font-size: 16px;
 }
 
 input.task-txt {
+    height: 22px;
     border: none;
+    border-bottom: 2px solid transparent;
     background: transparent;
     margin-bottom: -5px;
+    transition: all .5s;
+}
+
+input.task-txt:focus {
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid var(--Light-Grayish-Blue);
+    transition: all .5s;
+}
+
+.remove-task {
+    cursor: pointer;
 }
 
 aside#aside,
@@ -70,6 +94,8 @@ div.task {
     transition: all .5s;
 }
 
+/* Estilos light do input tarefa e das tarefas */
+
 .task {
     transition: all .5s;
     border-bottom: 1px solid var(--Light-Grayish-Blue);
@@ -85,20 +111,31 @@ div.task {
     overflow-y: auto;
 }
 
+.tasks, div.task {
+    background: var(--Very-Light-Gray);
+}
+
 .task,
 .tasks,
 .btn-filters {
     transition: all .5s;
     margin: auto;
-    background: var(--Very-Light-Gray);
+}
+
+/* Estilos dark do input tarefa e das tarefas */
+
+div.task.dark,
+.tasks.dark {
+    background: var(--Very-Dark-Desaturated-Blue);
 }
 
 .task.dark,
 .tasks.dark,
 .btn-filters.dark,
-.btn.dark {
+.btn.dark,
+input.task-txt.dark,
+input.task-txt.dark:focus {
     transition: all .5s;
-    background: var(--Very-Dark-Desaturated-Blue);
     color: var(--Light-Grayish-Blue);
 }
 
@@ -109,10 +146,6 @@ div.task {
     align-items: center;
     justify-content: space-between;
     padding: 4% 2.4% 4% 5%;
-}
-
-.task>.task-txt {
-    width: 85%;
 }
 
 .btn-filters {
@@ -134,6 +167,8 @@ div.task {
 .btn:hover  {
     color: var(--Bright-Blue);
 }
+
+/* Fim estilos de tema */
 
 .attribution {
     position: absolute;

@@ -42,18 +42,18 @@
 
       <!-- input tarefa -->
       <div class="task">
-        <button type="button" class="btn-check">
+        <button type="button" class="btn-check-disabled"  disabled>
           <img src="./assets/images/check.svg" alt="Check icon">
         </button>
-        <input type="text" id="task-description" class="task-txt" placeholder="Criar nova tarefa...">
+        <input type="text" id="task-input" class="task-txt" placeholder="Criar nova tarefa...">
         <button type="button" class="add-task">
           <img src="./assets/images/add.svg" alt="Add task">
         </button>
       </div>
 
       <!-- todas as tarefas -->
-      <ol class="tasks">
-        <li class="task">
+      <ul class="tasks">
+        <!-- <li class="task">
           <button type="button" class="btn-check">
             <img src="./assets/images/check.svg" alt="Check icon">
           </button>
@@ -61,19 +61,19 @@
           <button type="button" class="remove-task">
             <img src="./assets/images/close.svg" alt="Remove task">
           </button>
-        </li>
+        </li> -->
+      </ul>
 
-        <!-- botões para filtrar tarefas -->
-        <div class="btn-filters">
-          <p>N tarefas</p>
-          <div>
-            <button type="button" class="btn">Todas</button>
-            <button type="button" class="btn">Fazer</button>
-            <button type="button" class="btn">Concluídas</button>
-          </div>
-          <button type="button" class="btn">Apagar tudo</button>
+      <!-- botões para filtrar tarefas -->
+      <div class="btn-filters">
+        <p>N tarefas</p>
+        <div>
+          <button type="button" class="btn">Todas</button>
+          <button type="button" class="btn">Fazer</button>
+          <button type="button" class="btn">Concluídas</button>
         </div>
-      </ol>
+        <button type="button" class="btn">Apagar tudo</button>
+      </div>
 
       <!-- fim seção -->
     </section>
