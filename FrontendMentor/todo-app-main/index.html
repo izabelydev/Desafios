@@ -5,14 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="./assets/css/classes.css">
   <link rel="stylesheet" href="./assets/css/elements.css">
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/landscape.css" media="screen and (orientation: landscape)">
   <link rel="stylesheet" href="./assets/css/portrait.css" media="screen and (orientation: portrait)">
-
+  <!-- Font family -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- Script -->
+  <script src="./assets/js/script.js" defer></script>
 
   <title>Frontend Mentor | Todo app</title>
 
@@ -29,8 +35,8 @@
     <section class="content">
       <aside id="aside">
         <h1>TODO</h1>
-        <button type="button" class="moon on">
-          <img src="./assets/images/icon-moon.svg" alt="Moon">
+        <button type="button" class="change-theme on">
+          <img src="./assets/images/icon-moon.svg" alt="Moon" class="theme-icon moon">
         </button>
       </aside>
 
@@ -61,11 +67,11 @@
         <div class="btn-filters">
           <p>N tarefas</p>
           <div>
-            <button type="button">Todas</button>
-            <button type="button">Fazer</button>
-            <button type="button">Concluídas</button>
+            <button type="button" class="btn">Todas</button>
+            <button type="button" class="btn">Fazer</button>
+            <button type="button" class="btn">Concluídas</button>
           </div>
-          <button type="button">Apagar tudo</button>
+          <button type="button" class="btn">Apagar tudo</button>
         </div>
       </ol>
 

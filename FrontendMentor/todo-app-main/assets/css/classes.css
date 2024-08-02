@@ -3,6 +3,7 @@
 .on {
     opacity: 1;
     transition: opacity .5s;
+    transition-delay: .2s;
 }
 
 .off {
@@ -54,19 +55,28 @@ div.task {
 }
 
 .first-bg {
+    transition: all .5s;
     position: absolute;
 }
 
 .second-bg {
+    transition: all .5s;
     background-color: var(--Very-Light-Grayish-Blue);
     position: absolute;
 }
 
+.second-bg.dark {
+    background-color: var(--Very-Dark-Blue);
+    transition: all .5s;
+}
+
 .task {
+    transition: all .5s;
     border-bottom: 1px solid var(--Light-Grayish-Blue);
 }
 
 .tasks {
+    transition: all .5s;
     width: 100%;
     height: 100%;
     border-top-left-radius: 10px;
@@ -78,8 +88,18 @@ div.task {
 .task,
 .tasks,
 .btn-filters {
+    transition: all .5s;
     margin: auto;
     background: var(--Very-Light-Gray);
+}
+
+.task.dark,
+.tasks.dark,
+.btn-filters.dark,
+.btn.dark {
+    transition: all .5s;
+    background: var(--Very-Dark-Desaturated-Blue);
+    color: var(--Light-Grayish-Blue);
 }
 
 .task,
@@ -102,17 +122,16 @@ div.task {
 }
 
 .btn-filters p,
-.btn-filters > div > button,
-.btn-filters > button  {
+.btn {
     font-size: .8em;
 }
 
-.btn-filters > div > button:focus {
+.btn:focus {
     color: var(--Bright-Blue);
 }
 
-.btn-filters > div > button:hover,
-.btn-filters > button:hover  {
+.btn:hover,
+.btn:hover  {
     color: var(--Bright-Blue);
 }
 

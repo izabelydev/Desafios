@@ -7,7 +7,7 @@ section {
 }
 
 .first-bg {
-    background-image: url(../images/bg-mobile-light.jpg);
+    background: url(../images/bg-mobile-light.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
