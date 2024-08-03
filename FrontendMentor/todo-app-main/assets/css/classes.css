@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* Estilos gerais para todas as mídias */
+
 .on {
     opacity: 1;
     transition: opacity .5s;
@@ -11,36 +13,36 @@
     transition: opacity .5s;
 }
 
-.btn-check-disabled {
-    cursor: default;
-}
-
-.btn-check,
-.btn-check-disabled {
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    border-radius: 50%;
-    border: 1px solid var(--Dark-Grayish-Blue);
-    position: relative;
-}
-
-.btn-check img,
-.btn-check-disabled img {
+.wrapper {
     width: 100%;
-    opacity: 0;
-    border-radius: 50%;
-    background: var(--Check-Background);
+    height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
-.checked-icon-img {
-    opacity: 1;
+.content {
+    position: fixed;
+    background: transparent;
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-.task-txt {
-    width: 85%;
-    font-size: 16px;
+aside#aside,
+div.task {
+    margin-bottom: 5%;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
+.first-bg {
+    transition: all .5s;
+    position: absolute;
+}
+
+/* Estilos da descrição das tarefas */
 
 input.task-txt {
     height: 22px;
@@ -62,26 +64,40 @@ input.task-txt:focus {
     cursor: pointer;
 }
 
-aside#aside,
-div.task {
-    margin-bottom: 5%;
-    border-radius: 8px;
-    overflow: hidden;
+/* Estilos do botão marcar tarefa como concluída */
+
+.btn-check-disabled {
+    cursor: default;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100dvh;
+.btn-check {
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
-.first-bg {
-    transition: all .5s;
-    position: absolute;
+.btn-check span {
+    opacity: 0;
+    transition: opacity .5s;
 }
+
+.btn-check span.checked {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.btn-check,
+.btn-check-disabled {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid var(--Dark-Grayish-Blue);
+    position: relative;
+}
+
+/* Estilos tema light */
 
 .second-bg {
     transition: all .5s;
@@ -89,29 +105,27 @@ div.task {
     position: absolute;
 }
 
-.second-bg.dark {
-    background-color: var(--Very-Dark-Blue);
-    transition: all .5s;
-}
-
-/* Estilos light do input tarefa e das tarefas */
-
 .task {
     transition: all .5s;
     border-bottom: 1px solid var(--Light-Grayish-Blue);
 }
 
+.task-txt {
+    width: 85%;
+    font-size: 16px;
+}
+
 .tasks {
     transition: all .5s;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 218px);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-.tasks, div.task {
+.tasks, div.task, .btn-filters {
     background: var(--Very-Light-Gray);
 }
 
@@ -122,10 +136,15 @@ div.task {
     margin: auto;
 }
 
-/* Estilos dark do input tarefa e das tarefas */
+/* Estilos tema dark  */
+.second-bg.dark {
+    background-color: var(--Very-Dark-Blue);
+    transition: all .5s;
+}
 
 div.task.dark,
-.tasks.dark {
+.tasks.dark,
+.btn-filters.dark {
     background: var(--Very-Dark-Desaturated-Blue);
 }
 
@@ -145,7 +164,7 @@ input.task-txt.dark:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4% 2.4% 4% 5%;
+    padding: 4% 2.5% 4.2% 5%;
 }
 
 .btn-filters {
@@ -169,6 +188,14 @@ input.task-txt.dark:focus {
 }
 
 /* Fim estilos de tema */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 10
+}
 
 .attribution {
     position: absolute;

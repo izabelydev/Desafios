@@ -17,6 +17,9 @@
   <!-- Font family -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
   <!-- Script -->
   <script src="./assets/js/script.js" defer></script>
 
@@ -32,7 +35,7 @@
     <div class="second-bg"></div>
 
     <!-- inicío seção -->
-    <section class="content">
+    <div class="content">
       <aside id="aside">
         <h1>TODO</h1>
         <button type="button" class="change-theme on">
@@ -42,9 +45,7 @@
 
       <!-- input tarefa -->
       <div class="task">
-        <button type="button" class="btn-check-disabled"  disabled>
-          <img src="./assets/images/check.svg" alt="Check icon">
-        </button>
+        <button type="button" class="btn-check-disabled"  disabled></button>
         <input type="text" id="task-input" class="task-txt" placeholder="Criar nova tarefa...">
         <button type="button" class="add-task">
           <img src="./assets/images/add.svg" alt="Add task">
@@ -52,21 +53,11 @@
       </div>
 
       <!-- todas as tarefas -->
-      <ul class="tasks">
-        <!-- <li class="task">
-          <button type="button" class="btn-check">
-            <img src="./assets/images/check.svg" alt="Check icon">
-          </button>
-          <p class="task-txt">Lorem ipsum dolor sit.</p>
-          <button type="button" class="remove-task">
-            <img src="./assets/images/close.svg" alt="Remove task">
-          </button>
-        </li> -->
-      </ul>
+      <ul class="tasks"></ul>
 
       <!-- botões para filtrar tarefas -->
       <div class="btn-filters">
-        <p>N tarefas</p>
+        <p class="qtt-tasks">0 tarefa</p>
         <div>
           <button type="button" class="btn">Todas</button>
           <button type="button" class="btn">Fazer</button>
@@ -76,10 +67,10 @@
       </div>
 
       <!-- fim seção -->
-    </section>
+    </div>
 
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" target="_blank">Frontend Mentor</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://izabelydev.netlify.app/" target="_blank">Izabely Lourenço</a>.
     </div>
   </div>

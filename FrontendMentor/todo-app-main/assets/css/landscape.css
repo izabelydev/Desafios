@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-section {
+.content {
     width: 500px;
     height: 600px;
     top: 8%;

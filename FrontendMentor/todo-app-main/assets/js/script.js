@@ -73,7 +73,36 @@ function lightTheme() {
 // Adicionar tarefas
 const inputTask = document.querySelector('#task-input');
 const btnTask = document.querySelector('.add-task');
-// allTasks
+// const allTasks linha 32
+
+function saveTasks() {
+    const liTasks = allTasks.querySelectorAll('p');
+    const listOfTasks = [];
+
+    for (let taskTxt of liTasks) {
+        listOfTasks.push(taskTxt.innerText);
+    }
+    const tasksJSON = JSON.stringify(listOfTasks);
+    localStorage.setItem('tasks', tasksJSON);
+
+    // Mostrar quantidade de tarefas
+    const qttTasks = document.querySelector('.qtt-tasks');
+    if(listOfTasks.length < 2) {
+        qttTasks.innerText = `${listOfTasks.length} tarefa`;
+    } else {
+        qttTasks.innerText = `${listOfTasks.length} tarefas`;
+    }
+}
+
+function addSaveTasks() {
+    const tasks = localStorage.getItem('tasks');
+    const listOfTasks = JSON.parse(tasks);
+    
+    for (let taskTxt of listOfTasks) {
+        createTask(taskTxt);
+    }
+}
+addSaveTasks();
 
 function clearInput() {
     inputTask.value = '';
@@ -85,18 +114,24 @@ function createTask(txtInput) {
     li.setAttribute('class', 'task off');
     li.innerHTML = `
         <button type="button" class="btn-check">
-            <img src="./assets/images/check.svg" alt="Check icon">
+            <span class="material-symbols-outlined off">
+                check
+            </span>
         </button>
         <p class="task-txt">${txtInput}</p>
-        <img src="./assets/images/close.svg" alt="Remove task"  class="remove-task">`;
+        <span class="material-symbols-outlined remove-task">
+            close
+        </span>`;
 
     allTasks.appendChild(li);
     clearInput();
-
+    
     setTimeout(() => {
         li.classList.remove('off');
         li.classList.add('on');
     }, 100);
+
+    saveTasks();
 }
 
 btnTask.addEventListener('click', () => {
@@ -111,6 +146,7 @@ inputTask.addEventListener('keypress', e => {
     }
 });
 
+// Remover a tarefa com o botão X
 document.addEventListener('click', e => {
     const el = e.target;
 
@@ -119,6 +155,17 @@ document.addEventListener('click', e => {
         el.parentElement.classList.add('off');
         setTimeout(() => {
             el.parentElement.remove();
+            saveTasks();
         }, 200);
     }
 });
+
+// Salvar a tarefa no localStorage
+function saveTask() {
+    const liTasks = allTasks.querySelectorAll('li');
+    const listOfTasks = [];
+
+    for(let task of liTasks) {
+        console.log(task.innerText);
+    }
+}

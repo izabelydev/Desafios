@@ -11,16 +11,7 @@ body,
 html {
     width: 100dvw;
     height: 100dvh;
-    background: white;
     display: block;
-}
-
-section {
-    position: fixed;
-    background: transparent;
-    overflow: hidden;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 aside {
