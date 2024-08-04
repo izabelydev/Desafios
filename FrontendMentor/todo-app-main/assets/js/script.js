@@ -64,17 +64,13 @@ function lightTheme() {
     for (let i = 0; i < btnFilter.length; i++) {
         btnFilter[i].classList.remove('dark');
     }
-}
+} // Fim animação mudar tema
 
-// Fim animação mudar tema
+// Animação botão para checar tarefa (inserir essa função aqui)
 
-// Animação botão para checar tarefa
 
-// Adicionar tarefas
-const inputTask = document.querySelector('#task-input');
-const btnTask = document.querySelector('.add-task');
-// const allTasks linha 32
-
+// Salvar a tarefa no localStorage
+// variável allTasks linha 32
 function saveTasks() {
     const liTasks = allTasks.querySelectorAll('p');
     const listOfTasks = [];
@@ -102,7 +98,11 @@ function addSaveTasks() {
         createTask(taskTxt);
     }
 }
-addSaveTasks();
+addSaveTasks(); // Fim salvar a tarefa no localStorage
+
+const inputTask = document.querySelector('#task-input');
+const btnTask = document.querySelector('.add-task');
+// variável allTasks linha 32
 
 function clearInput() {
     inputTask.value = '';
@@ -134,6 +134,7 @@ function createTask(txtInput) {
     saveTasks();
 }
 
+// Capturar valor do input para criar a tarefa
 btnTask.addEventListener('click', () => {
     if (!inputTask.value) return;
     createTask(inputTask.value);
@@ -159,13 +160,3 @@ document.addEventListener('click', e => {
         }, 200);
     }
 });
-
-// Salvar a tarefa no localStorage
-function saveTask() {
-    const liTasks = allTasks.querySelectorAll('li');
-    const listOfTasks = [];
-
-    for(let task of liTasks) {
-        console.log(task.innerText);
-    }
-}
