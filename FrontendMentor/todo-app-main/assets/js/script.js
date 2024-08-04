@@ -1,4 +1,4 @@
-// Declaração de variáveis
+// Declaração de variáveis globais
 const btnTheme = document.querySelector('.change-theme');
 const secondBg = document.querySelector('.second-bg');
 const allTasks = document.querySelector('.tasks');
