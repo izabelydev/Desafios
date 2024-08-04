@@ -3,11 +3,12 @@ const btnTheme = document.querySelector('.change-theme');
 const secondBg = document.querySelector('.second-bg');
 const allTasks = document.querySelector('.tasks');
 const filtersBg = document.querySelector('.btn-filters');
-const taskBg = document.querySelectorAll('.task');
 const inputTxt = document.querySelector('.task-txt');
-const btnFilter = document.querySelectorAll('.btn');
 const btnTask = document.querySelector('.add-task');
 const inputTask = document.querySelector('#task-input');
+const btnClearTasks = document.querySelector('.remove-all');
+const btnFilter = document.querySelectorAll('.btn');
+const taskBg = document.querySelectorAll('.task');
 const isMobile = window.innerWidth < 575;
 
 // Início animação mudar tema
@@ -154,4 +155,15 @@ document.addEventListener('click', e => {
             saveTasks();
         }, 200);
     }
+});
+
+// Apagar todas as tarefas
+btnClearTasks.addEventListener('click', () => {
+        const confirmation = confirm('Tem certeza? Não é possível desafazer essa ação');
+        if(confirmation) {
+            allTasks.innerHTML = '';
+            saveTasks();
+        } else {
+            return;
+        }
 });
