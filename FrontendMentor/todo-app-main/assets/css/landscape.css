@@ -18,3 +18,7 @@
     height: calc(100vh - 295px);
 }
 
+.tasks {
+    height: 60%;
+}
+
