@@ -1,6 +1,16 @@
-// Início animação mudar tema
+// Declaração de variáveis
 const btnTheme = document.querySelector('.change-theme');
+const secondBg = document.querySelector('.second-bg');
+const allTasks = document.querySelector('.tasks');
+const filtersBg = document.querySelector('.btn-filters');
+const taskBg = document.querySelectorAll('.task');
+const inputTxt = document.querySelector('.task-txt');
+const btnFilter = document.querySelectorAll('.btn');
+const btnTask = document.querySelector('.add-task');
+const inputTask = document.querySelector('#task-input');
+const isMobile = window.innerWidth < 575;
 
+// Início animação mudar tema
 btnTheme.addEventListener('click', () => {
     const imgTheme = document.querySelector('.theme-icon');
 
@@ -16,7 +26,6 @@ btnTheme.addEventListener('click', () => {
         btnTheme.classList.add('off');
         btnTheme.classList.remove('on');
 
-
         setTimeout(() => {
             imgTheme.setAttribute('class', `theme-icon ${newClass}`);
             imgTheme.setAttribute('src', `./assets/images/${newImg}`);
@@ -27,14 +36,6 @@ btnTheme.addEventListener('click', () => {
         }, 500);
     }
 });
-
-const secondBg = document.querySelector('.second-bg');
-const allTasks = document.querySelector('.tasks');
-const filtersBg = document.querySelector('.btn-filters');
-const taskBg = document.querySelectorAll('.task');
-const inputTxt = document.querySelector('.task-txt');
-const btnFilter = document.querySelectorAll('.btn');
-const isMobile = window.innerWidth < 575;
 
 function darkTheme() {
     secondBg.classList.add('dark');
@@ -68,9 +69,7 @@ function lightTheme() {
 
 // Animação botão para checar tarefa (inserir essa função aqui)
 
-
 // Salvar a tarefa no localStorage
-// variável allTasks linha 32
 function saveTasks() {
     const liTasks = allTasks.querySelectorAll('p');
     const listOfTasks = [];
@@ -99,10 +98,6 @@ function addSaveTasks() {
     }
 }
 addSaveTasks(); // Fim salvar a tarefa no localStorage
-
-const inputTask = document.querySelector('#task-input');
-const btnTask = document.querySelector('.add-task');
-// variável allTasks linha 32
 
 function clearInput() {
     inputTask.value = '';
