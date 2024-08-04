@@ -15,6 +15,6 @@
 .second-bg {
     top: 291.656px;
     width: 1440px;
-    height: 55vh;
+    height: calc(100vh - 295px);
 }
 
