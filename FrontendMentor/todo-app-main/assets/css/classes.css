@@ -64,6 +64,8 @@ input.task-txt:focus {
 
 /* Estilos do botão marcar tarefa como concluída */
 
+/* Estilos do botão marcar tarefa como concluída */
+
 .btn-check-disabled {
     cursor: default;
 }
@@ -74,25 +76,36 @@ input.task-txt:focus {
     justify-content: center;
 }
 
-.btn-check span {
+.btn-check img {
+    margin: 0 auto;
+    width: 100%;
+    padding: 5%;
     opacity: 0;
-    transition: opacity .5s;
-}
-
-.btn-check span.checked {
-    opacity: 1;
     transition: opacity .5s;
 }
 
 .btn-check,
 .btn-check-disabled {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     margin-right: 5px;
     display: flex;
     border-radius: 50%;
     border: 1px solid var(--Dark-Grayish-Blue);
     position: relative;
+}
+
+.completed img.btn-check {
+    opacity: 1;
+    border-radius: 50%;
+    border: none;
+    color: var(--Very-Light-Gray);
+    background: var(--Check-Background);
+}
+
+.completed .task-txt {
+    text-decoration: line-through;
+    color: var(--Dark-Grayish-Blue);
 }
 
 /* Estilos tema light */

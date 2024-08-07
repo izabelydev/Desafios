@@ -1,6 +1,7 @@
 // Declaração de variáveis globais
 const btnTheme = document.querySelector('.change-theme');
 const secondBg = document.querySelector('.second-bg');
+const tasks = document.querySelectorAll('.tasks');
 const allTasks = document.querySelector('.tasks');
 const filtersBg = document.querySelector('.btn-filters');
 const inputTxt = document.querySelector('.task-txt');
@@ -40,9 +41,12 @@ btnTheme.addEventListener('click', () => {
 
 function darkTheme() {
     secondBg.classList.add('dark');
-    allTasks.classList.add('dark');
     filtersBg.classList.add('dark');
     inputTxt.classList.add('dark');
+
+    for (let i = 0; i < tasks.length; i++) {
+        tasks[i].classList.add('dark');
+    }
 
     for (let i = 0; i < taskBg.length; i++) {
         taskBg[i].classList.add('dark');
@@ -59,6 +63,10 @@ function lightTheme() {
     filtersBg.classList.remove('dark');
     inputTxt.classList.remove('dark');
 
+    for (let i = 0; i < tasks.length; i++) {
+        tasks[i].classList.remove('dark');
+    }
+
     for (let i = 0; i < taskBg.length; i++) {
         taskBg[i].classList.remove('dark');
     }
@@ -68,7 +76,6 @@ function lightTheme() {
     }
 } // Fim animação mudar tema
 
-// Animação botão para checar tarefa (inserir essa função aqui)
 
 // Salvar a tarefa no localStorage
 function saveTasks() {
@@ -83,7 +90,7 @@ function saveTasks() {
 
     // Mostrar quantidade de tarefas
     const qttTasks = document.querySelector('.qtt-tasks');
-    if(listOfTasks.length < 2) {
+    if (listOfTasks.length < 2) {
         qttTasks.innerText = `${listOfTasks.length} tarefa`;
     } else {
         qttTasks.innerText = `${listOfTasks.length} tarefas`;
@@ -93,7 +100,7 @@ function saveTasks() {
 function addSaveTasks() {
     const tasks = localStorage.getItem('tasks');
     const listOfTasks = JSON.parse(tasks);
-    
+
     for (let taskTxt of listOfTasks) {
         createTask(taskTxt);
     }
@@ -107,12 +114,10 @@ function clearInput() {
 
 function createTask(txtInput) {
     const li = document.createElement('li');
-    li.setAttribute('class', 'task off');
+    li.setAttribute('class', 'task on todo');
     li.innerHTML = `
         <button type="button" class="btn-check">
-            <span class="material-symbols-outlined off">
-                check
-            </span>
+            <img class="btn-check" src="./assets/images/icon-check.svg" alt="Check">
         </button>
         <p class="task-txt">${txtInput}</p>
         <span class="material-symbols-outlined remove-task">
@@ -121,7 +126,7 @@ function createTask(txtInput) {
 
     allTasks.appendChild(li);
     clearInput();
-    
+
     setTimeout(() => {
         li.classList.remove('off');
         li.classList.add('on');
@@ -130,6 +135,23 @@ function createTask(txtInput) {
     saveTasks();
 }
 
+// Animação botão para checar tarefa
+document.addEventListener('click', e => {
+    const el = e.target;
+
+    if (el.classList.contains('btn-check')) {
+        const taskItem = el.closest('li.task');
+
+        if (!taskItem) return;
+        if(taskItem.classList.contains('completed')) {
+            taskItem.classList.remove('completed');
+        } else {
+            taskItem.classList.toggle('completed');
+        }
+    }
+    saveTasks();
+});
+
 // Capturar valor do input para criar a tarefa
 btnTask.addEventListener('click', () => {
     if (!inputTask.value) return;
@@ -137,7 +159,7 @@ btnTask.addEventListener('click', () => {
 });
 
 inputTask.addEventListener('keypress', e => {
-    if(e.keyCode === 13) {
+    if (e.keyCode === 13) {
         if (!inputTask.value) return;
         createTask(inputTask.value);
     }
@@ -147,7 +169,7 @@ inputTask.addEventListener('keypress', e => {
 document.addEventListener('click', e => {
     const el = e.target;
 
-    if(el.classList.contains('remove-task')) {
+    if (el.classList.contains('remove-task')) {
         el.parentElement.classList.remove('on');
         el.parentElement.classList.add('off');
         setTimeout(() => {
@@ -159,11 +181,11 @@ document.addEventListener('click', e => {
 
 // Apagar todas as tarefas
 btnClearTasks.addEventListener('click', () => {
-        const confirmation = confirm('Tem certeza? Não é possível desafazer essa ação');
-        if(confirmation) {
-            allTasks.innerHTML = '';
-            saveTasks();
-        } else {
-            return;
-        }
+    const confirmation = confirm('Tem certeza? Não é possível desafazer essa ação');
+    if (confirmation) {
+        allTasks.innerHTML = '';
+        saveTasks();
+    } else {
+        return;
+    }
 });
