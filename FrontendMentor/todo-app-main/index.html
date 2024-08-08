@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/landscape.css" media="screen and (orientation: landscape)">
   <link rel="stylesheet" href="./assets/css/portrait.css" media="screen and (orientation: portrait)">
+
   <!-- Font family -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -24,6 +25,7 @@
 
   <!-- Scripts -->
   <script src="./assets/js/script.js" defer></script>
+
 
   <title>Frontend Mentor | Todo app</title>
 
@@ -61,9 +63,9 @@
       <section class="btn-filters">
         <p class="qtt-tasks">0 tarefa</p>
         <div>
-          <button type="button" class="btn">Todas</button>
-          <button type="button" class="btn">Fazer</button>
-          <button type="button" class="btn">Concluídas</button>
+          <button type="button" class="btn active" data-filter="task">Todas</button>
+          <button type="button" class="btn" data-filter="todo">Fazer</button>
+          <button type="button" class="btn" data-filter="completed">Concluídas</button>
         </div>
         <button type="button" class="btn remove-all">Apagar tudo</button>
       </section>

@@ -165,6 +165,45 @@ inputTask.addEventListener('keypress', e => {
     }
 });
 
+// Filtrar as tarefas
+btnFilter.forEach(button => {
+    button.addEventListener('click', () => {
+        btnFilter.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+        filterTasks(filter);
+    });
+});
+
+function filterTasks(filter) {
+    const allTasks = document.querySelectorAll('.tasks li');
+    
+    allTasks.forEach(task => {
+        switch (filter) {
+            case 'task':
+                task.style.display = 'flex';
+                break;
+            case 'todo':
+                if (task.classList.contains('todo') && !task.classList.contains('completed')) {
+                    task.style.display = 'flex';
+                } else {
+                    task.style.display = 'none';
+                }
+                break;
+            case 'completed':
+                if (task.classList.contains('completed')) {
+                    task.style.display = 'flex';
+                } else {
+                    task.style.display = 'none';
+                }
+                break;
+            default:
+                task.style.display = 'flex';
+        }
+    });
+}
+
 // Remover a tarefa com o botão X
 document.addEventListener('click', e => {
     const el = e.target;
